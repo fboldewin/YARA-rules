@@ -10,7 +10,7 @@ rule ATM_Malware_JavaDispCash {
 	strings:
 		$CashInfo = "getNumberOfCashUnits" nocase ascii wide
 		$Dispense = "waitforbillstaken" nocase ascii wide
-		$Inject = "No code to inject!" nocase ascii wide // 
+		$Inject = "No code to inject!" nocase ascii wide
 		$config = ".Agentcli" nocase ascii wide
 		$log1 = "logft.log" nocase ascii wide
 		$log2 = ".loginside" nocase ascii wide
