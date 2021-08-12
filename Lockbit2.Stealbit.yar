@@ -2,7 +2,7 @@ rule Stealbit {
 	meta:
 		description = "Detects Stealbit used by Lockbit 2.0 Ransomware Gang"
 		author = "Frank Boldewin (@r3c0nst)"
-		reference = "https://raw.githubusercontent.com/fboldewin/YARA-rules/master/Stealbit.yar"
+		reference = "https://raw.githubusercontent.com/fboldewin/YARA-rules/master/Lockbit2.Stealbit.yar"
 		date = "2021-08-12"
 		hash1 = "3407f26b3d69f1dfce76782fee1256274cf92f744c65aa1ff2d3eaaaf61b0b1d"
 		hash2 = "bd14872dd9fdead89fc074fdc5832caea4ceac02983ec41f814278130b3f943e"
