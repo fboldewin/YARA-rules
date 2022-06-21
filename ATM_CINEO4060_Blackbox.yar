@@ -5,7 +5,7 @@ rule ATM_CINEO4060_Blackbox {
         description = "Detects Malware samples for Diebold Nixdorf CINEO 4060 ATMs used in blackboxing attacks across Europe since May 2021"
         author = "Frank Boldewin (@r3c0nst)"
         date = "2021-05-25"
-	references = "https://twitter.com/r3c0nst"
+	references = "https://twitter.com/r3c0nst/status/1539036442516660224"
 
     strings:
         $MyAgent1 = "javaagentsdemo/ClassListingTransformer.class" ascii fullword
