@@ -17,10 +17,12 @@ rule Nighthawk_RAT
 		$pattern1 = { 48 8d 0d ?? ?? ?? ?? 51 5a 48 81 c1 ?? ?? ?? ?? 48 81 c2 ?? ?? ?? ?? ff e2 }
 		$pattern2 = { 66 03 D2 66 33 D1 66 C1 E2 02 66 33 D1 66 23 D0 0F B7 C1 }
 		$pattern3 = { FF 7F 48 3B F0 48 0F 47 F0 48 8D }
-		$pattern4 = { 65 48 8B 04 25 30 00 00 00 8B 40 68 49 89 CA 0F 05 c3}
+		$pattern4 = { 65 48 8B 04 25 30 00 00 00 8B 40 68 49 89 CA 0F 05 C3 }
+		$pattern5 = { 48 B8 AA AA AA AA AA AA AA 02 48 ?? ?? ?? ?? 0F 84 }
+		$pattern6 = { 65 48 8B 04 25 30 00 00 00 48 8B 80 }
 
 	condition:
 		uint16(0) == 0x5A4D and filesize < 2MB and
-		((2 of them) or
-		(pe.section_index(".profile") and pe.section_index(".detourc") and pe.section_index(".detourc")))
+		(3 of ($pattern*) or
+		(pe.section_index(".profile") and pe.section_index(".detourc") and pe.section_index(".detourd")))
 }
