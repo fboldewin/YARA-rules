@@ -7,7 +7,7 @@ rule UNC2891_Caketap
 
 	strings:
 		$str1  = ".caahGss187" ascii fullword // SyS_mkdir hook cmd ident
-		$str2 = "ipstat" ascii // ipstat lkm name
+		$str2 = "ipstat" ascii // rootkit lkm name
 		$code1 = {41 80 7E 06 4B 75 ?? 41 80 7E 07 57 75 ?? 41 0F B6 46 2B} // HSM cmd KW check
 		$code2 = {41 C6 46 01 3D 41 C6 46 08 32} // mode_flag switch
 
